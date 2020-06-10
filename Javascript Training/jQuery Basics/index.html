@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Let's Have Fun!</h1>
+        <button class="panel-button" data-panelid="panel1">#btn1</button>
+        <button class="panel-button" data-panelid="panel2">#btn2</button>
+        <button class="panel-button" data-panelid="panel3">#btn3</button>
+        <button class="panel-button" data-panelid="panel4">#btn4</button>
+    </div>
+
+    <div class="content-section">
+        <div id="panel1" class="container">
+            <div class="panel-heading">#panel1</div>
+            <div class="panel-content">content</div>
+        </div>
+        <div id="panel2" class="container">
+            <div class="panel-heading">#panel2</div>
+            <div class="panel-content">content</div>
+        </div>
+        <div id="panel3" class="container">
+            <div class="panel-heading">#panel3</div>
+            <div class="panel-content">content</div>
+        </div>
+        <div id="panel4" class="container">
+            <div class="panel-heading">#panel4</div>
+            <div class="panel-content">content</div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+
+            var content = "Greetings, Traveler";
+
+            $(".content-section .container").hide();
+
+            $(".panel-button").on("click",function(){
+                var panelId = $(this).attr('data-panelid');
+                $("#"+panelId).fadeToggle();
+                $("#"+panelId+" .panel-content").html(content);
+            });
+
+        });
+    </script>
+</body>
+
+</html>

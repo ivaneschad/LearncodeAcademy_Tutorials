@@ -1,0 +1,47 @@
+body {
+    font-family: "helvetica";
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 5% 20%;
+    background-color: lightgray;
+}
+
+.hero h1{
+    position: relative;
+    top: -5px;
+}
+
+.hero button {
+    font-weight: bold;
+    height: 40px;
+    margin: 0 4px 20px 4px;
+}
+
+.content-section{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    height: auto;
+    border: 1px solid royalblue;
+}
+
+.panel-heading{
+    color: white;
+    font-weight: bold;
+    background-color: royalblue;
+    padding: 10px;
+}
+
+.panel-content{
+    padding: 10px;
+}

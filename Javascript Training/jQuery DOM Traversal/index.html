@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jQuery production version/jquery-3.4.1.min.js"></script>
+    <style>
+        body {
+            font-family: Helvetica;
+            font-size: large;
+        }
+
+        .special {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list">
+        <li>one</li>
+        <li class="special">two</li>
+        <li>three</li>
+        <li>
+            <ul class="sublist">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $(function () {
+
+            $("li").on("click", function () {
+                if ($(this).parent().is(".sublist")) {
+                    $(this).hide();
+                }
+            })
+
+
+            /* $(".list").on("click",function(){
+                $(this).find("li").filter(".special").remove();
+            }); Optimal JS, $(this).find forces the compiler to stay within the scope instead of making it search in the entire page. */
+
+            /* $("li").on("click", function () {
+                $(this).hide();
+                if ($(this).is(".special")) {
+                    alert("special");
+                } else if (!$(this).is(".special")) {
+                    alert("not special");
+                }
+            }); */
+
+            /* $("li").on("click",function(){
+                $(this).next().remove();
+            }); */
+
+            /* $("li").on("click",function(){
+                $(this).removeClass("special");
+                $(this).siblings().addClass("special");
+            }); */
+
+            /* $("li").on("click",function(){
+                $(this).closest(".list").addClass("special");
+            }); */
+        })
+    </script>
+
+</body>
+
+</html>
