@@ -1,0 +1,9 @@
+# Theory with Console.
+Individual study of functionalities and components of Redux before tying it up with react.
+It was all done to be tested in a Browser's console.
+
+# The rest of the files.
+React with Redux integration. The RESTful requests were made with a test page granted by Learncode.
+The dummy data is to be erased from two days after creation but all the written logic works.
+http://rest.learncode.academy/
+Instructions of its use are inside.
